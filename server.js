@@ -77,8 +77,17 @@ try{
 bot.on("ready", async () => {
   Tags.sync();
   console.log(`${bot.user.username} working`);
-  bot.user.setActivity(`In Development`);
-  bot.user.setStatus("online");
+ const activities_list = [
+    `${prefix}commands`,
+    "http://gg.gg/fortrex",
+    `${prefix}help`,
+    "VALORANT",
+    "Animal Crossing"
+];
+    setInterval(() => {
+    const index = Math.floor(Math.random() * (activities_list.length - 1) + 1); 
+    bot.user.setActivity(activities_list[index]); 
+  }, 100000);
 
   bot.on("message", async message => {
     if (message.author.bot) return;
