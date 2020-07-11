@@ -1,16 +1,7 @@
 const Discord = require("discord.js");
 const main = require("./../server.js");
 const botconfig = require("./../config.json");
-const Sequelize = require("sequelize");
 const prefix = botconfig.prefix;
-// let prefix = config.prefix;
-const sequelize = new Sequelize('database', 'username', 'password', {
-	host: 'localhost',
-	dialect: 'sqlite',
-	logging: false,
-	// SQLite only
-	storage: 'database.sqlite',
-});
 
 module.exports.run = async (bot, message, args) => {
   if (!message.content.startsWith(prefix)) return;
