@@ -1,0 +1,27 @@
+{
+  "name": "fortrex",
+  "version": "2.0.1",
+  "description": "nothing to say",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "discord.js": "^12.2.0",
+    "cheerio": "^0.22.0",
+    "axios": "^0.19.2",
+    "quick.db": "^7.1.1",
+    "sequelize": "^6.3.2",
+    "https": "^1.0.0",
+    "sqlite3": "^5.0.0",
+    "jimp": "^0.14.0",
+    "twemoji": "^13.0.0",
+    "dotenv": "^8.2.0",
+    "canvas": "^2.6.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Bijit",
+  "license": "MIT"
+}
