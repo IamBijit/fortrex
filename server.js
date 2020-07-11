@@ -171,4 +171,4 @@ bot.on("message", message => {
     message.channel.send(GetNightWishes);
   }
 });
-bot.login(bot.config.TOKEN);
+bot.login(process.env.BOT_TOKKEN);
