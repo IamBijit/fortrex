@@ -6,13 +6,22 @@ module.exports.run = async (bot, message, args) => {
     if(!message.content.startsWith(prefix))return;  
 
 
-    const user = message.mentions.users.first() || message.author;
-    const avatarEmbed = new Discord.MessageEmbed()
-      .setColor(botconfig.primary)
-      .setAuthor(user.username)
-      .setImage(user.avatarURL);
-    message.channel.send(avatarEmbed);
+    let msg = await message.channel.send("Generating avatar...");
 
+    let mentionedUser = message.mentions.users.first() || message.author;
+
+        let embed = new Discord.MessageEmbed()
+
+        .setImage(mentionedUser.avatarURL())
+        .setColor(botconfig.primary)
+        .setTitle("Avatar")
+        .setFooter("Searched by " + message.author.tag)
+        .setDescription("[Avatar URL link]("+mentionedUser.avatarURL()+")");
+
+        message.channel.send(embed)
+
+
+    msg.delete();
 }
 
 module.exports.help = {
