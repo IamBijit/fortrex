@@ -32,7 +32,7 @@ module.exports.run = async (bot, message, args) => {
         if (urlSpan) {
           const urlText = Loader(urlSpan).text();
           const score = Loader(ratingSpan).text();
-          let embed = new Discord.RichEmbed();
+          let embed = new Discord.MessageEmbed();
           let gameList =
             `** #${i + 1}:  ${urlText} **\n    ` +
             "  `Release: " +
