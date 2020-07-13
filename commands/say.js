@@ -9,6 +9,8 @@ module.exports.run = async (bot, message, args) => {
   if (!message.content.startsWith(prefix)) return;
  let command = prefix + module.exports.help.name + 1;
   let say = message.content.slice(command.length);
+  let hasPerm = (message.guild.me.hasPermission("ADMINISTRATOR"));
+  if(hasPerm){
   message.channel.startTyping();
   message.delete();
   setTimeout(() => {
@@ -16,6 +18,9 @@ module.exports.run = async (bot, message, args) => {
       message.channel.stopTyping();
     });
   }, 2000);
+} if(!hasPerm){
+  return message.channel.send(`:sob: I need **admin** pwer for this action! `);
+}
 };
 
 module.exports.help = {
