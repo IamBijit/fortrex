@@ -123,23 +123,23 @@ bot.on("message", message => {
   //Some Fun Commands
   if(message.content.startsWith('lol')){
     
-    message.channel.send(GetFunWishes);
+    message.channel.send('...funny..xD');
   }
   if(message.content.startsWith('Lol')){
     
-    message.channel.send(GetFunWishes);
+    message.channel.send('...lol');
   }
   if(message.content.startsWith('lmao')){
     
-    message.channel.send(GetFunWishes);
+    message.channel.send('..funny?');
   }
   if(message.content.startsWith('LOL')){
     
-    message.channel.send(GetFunWishes);
+    message.channel.send('Lmao');
   }
   if(message.content.startsWith('lol')){
     
-    message.channel.send(GetFunWishes);
+    message.channel.send('lolll...');
   }
   
   //Random Morning Messages
