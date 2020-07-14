@@ -1,5 +1,5 @@
 require('dotenv').config()
-const botconfig = require(".
+const botconfig = require("./config');
 const Discord = require("discord.js");
 const prefix = botconfig.prefix;
 const fs = require("fs");
@@ -115,31 +115,6 @@ bot.on("ready", async () => {
   });
 });
 bot.on("message", message => {
-    const FunWishes = wishes.fun;
-    const countFun = FunWishes.length;
-    const RandomFun = Math.floor((Math.random() * countFun) + 1);
-    const GetFunWishes = FunWishes[RandomFun];
-  //Some Fun Commands
-  if(message.content.startsWith('lol')){
-    
-    message.channel.send('...funny..xD');
-  }
-  if(message.content.startsWith('Lol')){
-    
-    message.channel.send('...lol');
-  }
-  if(message.content.startsWith('lmao')){
-    
-    message.channel.send('..funny?');
-  }
-  if(message.content.startsWith('LOL')){
-    
-    message.channel.send('Lmao');
-  }
-  if(message.content.startsWith('lol')){
-    
-    message.channel.send('lolll...');
-  }
   
   //Random Morning Messages
   const Mornings = wishes.gm;
