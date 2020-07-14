@@ -1,5 +1,6 @@
 require('dotenv').config()
-const botconfig = require("./config');
+const botconfig = require("./config.json');
+const wishes = require("./wishes.json');
 const Discord = require("discord.js");
 const prefix = botconfig.prefix;
 const fs = require("fs");
